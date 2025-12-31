@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+}
+
+/* nav styling */
+nav {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    background: black;
+    position: relative;
+}
+
+
+
+.logo p {
+    font-weight: 900;
+    font-family: "Lato", sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    color: #fff;
+}
+
+.logo p:hover {
+    color: crimson;
+}
+
+
+nav ul {
+    display: flex;
+    transition: 3s ease-in-out;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    position: relative;
+    padding: 0.4rem 1rem;
+    border-radius: 0.3rem;
+    transition: 0.3s;
+
+}
+
+#active {
+    background-color: crimson;
+}
+
+nav ul li a:hover {
+    background-color: crimson;
+
+}
+
+
+#menu-icon {
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* responsive nav class */
+.show-ul {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    background-color: rgba(0, 0, 0, 0.770);
+    transition: 0.2s;
+}
+
+
+/* Hero section */
+
+
+
+.main-container {
+    height: calc(100vh - 4rem);
+    width: 100%;
+    background-image: url(assets/hero-image.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.over-lap {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.870);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.main-content h1 {
+    color: #fff;
+    font-family: "jost", sans-serif;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.main-content h1 span {
+    color: crimson;
+}
+
+.main-container p {
+    color: white;
+    text-align: center;
+    font-family: "jost", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+}
+
+.main-container .btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.main-container .btn-container a {
+    padding: 0.5rem 2rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+    font-family: "jost", sans-serif;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background-color: crimson;
+    color: #fff;
+    border-radius: 0.3rem;
+    transition: 0.3s;
+    text-decoration: none;
+    box-shadow: 0 0 0.5rem 2px crimson;
+}
+
+.main-container .btn-container a:hover {
+    background-color: crimson;
+    box-shadow: 0 0 2rem 10px crimson;
+    transform: scale(1.1);
+}
+
+
+
+
+/* Watches section */
+
+.watches-container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+}
+
+.card-heading {
+    text-align: center;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-heading h1 {
+    font-size: 3em;
+    font-family: "jost", sans-serif;
+    font-style: italic;
+    color: #fff;
+}
+
+.card-heading h1:hover {
+    color: crimson;
+}
+
+.card-container {
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.card {
+    width: 25%;
+    height: auto;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    box-shadow: 0 0 0.4rem 0.1rem crimson;
+    transition: 0.3s;
+    padding: 1rem 1rem;
+    will-change: transform;
+    
+}
+
+.card:hover {
+    /* transform: translateY(-1rem); */
+    transform: scale(1.1);
+    box-shadow: 0 0 1rem 0.2rem crimson;
+}
+
+.card .image-container {
+    width: 100%;
+    height: 15.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4rem;
+}
+
+.card .image-container img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+
+}
+
+.card .card-text {
+    width: 100%;
+    height: 30%;
+    position: relative;
+    z-index: 1;
+    transform: translateZ(0);
+    text-align: center;
+
+
+}
+
+.card-text h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    color: #fff;
+}
+
+.card-text h6 {
+    color: crimson;
+    margin-top: 0.6rem;
+    font-size: 0.80rem;
+}
+
+.card-text p {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.card-text p span {
+    color: red;
+}
+
+.card-text .btn-container {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.btn-container button {
+    padding: 0.4rem 1.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: crimson;
+    color: #fff;
+    font-weight: 700;
+    font-family: "jost", sans-serif;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-container button:hover {
+    box-shadow: 0 0 1rem 0.4rem crimson;
+}
+
+
+
+
+
+/* contact section   */
+#contact {
+    padding: 100px 40px;
+    background: rgb(187, 175, 177);
+    text-align: center;
+    height: 100vh;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: crimson;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 0.1rem solid crimson;
+}
+
+.contact-form button {
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    background: crimson;
+    color: black;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px crimson;
+}
+
+
+
+
+/* footer styling */
+
+.footer {
+    background: #111;
+    color: #ddd;
+    padding: 60px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-box h3 {
+    color: crimson;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.footer-box p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-box ul {
+    list-style: none;
+}
+
+.footer-box ul li {
+    margin-bottom: 10px;
+}
+
+.footer-box ul li a {
+    color: crimson;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+    color: #fff;
+}
+
+.footer-box i {
+    color: crimson;
+    margin-right: 8px;
+    background-color: none;
+}
+
+
+
+.social-links i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: #222;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.social-links i:hover {
+    background-color: crimson;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 0 1rem .2rem crimson;
+}
